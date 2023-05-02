@@ -15,7 +15,7 @@ function Home() {
             xs={12}
             sm={7}
             md={10}
-            lg={7}
+            lg={6}
             sx={{
               display: "flex",
               flexDirection: "column",
@@ -48,15 +48,25 @@ function Home() {
             xs={12}
             sm={5}
             md={12}
-            lg={5}
-            sx={{
-              [theme.breakpoints.only("sm")]: {
-                scale: "0.7"
-              },
-              textAlign: "center",
-            }}
+            lg={6}
           >
-            <img src="./imgs/test.webp" className="logo" />
+            <Box component="div" sx={{
+              m: "40px auto 0",
+              [theme.breakpoints.only("xs")]: {
+                width: "250px",
+                height: "350px"
+              },
+              [theme.breakpoints.only("sm")]: {
+                width: "220px",
+                height: "320px"
+              },
+              [theme.breakpoints.up("md")]: {
+                width: "350px",
+                height: "450px",
+              },
+              }} >
+              <img src="./imgs/test.webp" style={{ width: "inherit", height: "inherit", objectFit: "cover" }} />
+            </Box>
           </Grid>
         </Grid>
       </Box>
